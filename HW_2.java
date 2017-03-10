@@ -5,63 +5,63 @@ import java.util.Random;
 public class HW_2 {
 
     public static void main(String[] args) {
-        int[][] Arr = new int[3][3];
+        int[][] arr = new int[3][3];
         Random R = new Random();
-        for (int i = 0; i < Arr.length; i++)
-            for (int j = 0; j < Arr[i].length; j++)
-                Arr[i][j] = R.nextInt(10);
+        for (int i = 0; i < arr.length; i++)
+            for (int j = 0; j < arr[i].length; j++)
+                arr[i][j] = R.nextInt(10);
         System.out.println("Выводим матрицу");
-        for (int i = 0; i < Arr.length; i++) {
-            for (int j = 0; j < Arr.length; j++)
-                System.out.print(Arr[i][j] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++)
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим элементы выше побочной диагонали с диагональю");
-        for (int i = 0; i < Arr.length; i++) {
-            for (int j = 0; j < (Arr.length - i); j++)
-                System.out.print(Arr[i][j] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < (arr.length - i); j++)
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим элементы выше побочной диагонали без диагонали");
-        for (int i = 0; i < Arr.length; i++) {
-            for (int j = 0; j < (Arr.length - i - 1); j++)
-                System.out.print(Arr[i][j] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < (arr.length - i - 1); j++)
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим элементы ниже побочной диагонали с диагональю");
-        for (int i = 0; i < Arr.length; i++) {
-            for (int j = 3 - i - 1; j < Arr.length; j++)
-                System.out.print(Arr[i][j] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 3 - i - 1; j < arr.length; j++)
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим элементы ниже побочной диагонали без диагонали");
-        for (int i = 0; i < Arr.length; i++) {
-            for (int j = 3 - i; j < (Arr.length); j++)
-                System.out.print(Arr[i][j] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 3 - i; j < (arr.length); j++)
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим элементы выше главной диагонали с диагональю");
-        for (int i = 0; i < Arr.length; i++) {
-            for (int j = i; j < Arr.length; j++)
-                System.out.print(Arr[i][j] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++)
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим элементы выше главной диагонали без диагонали");
-        for (int i = 0; i < Arr.length; i++) {
-            for (int j = i + 1; j < Arr.length; j++)
-                System.out.print(Arr[i][j] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++)
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим элементы ниже главной диагонали с диагональю");
-        for (int i = 0; i < Arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < i + 1; j++)
-                System.out.print(Arr[i][j] + " ");
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим элементы ниже главной диагонали без диагонали");
-        for (int i = 0; i < Arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < i; j++)
-                System.out.print(Arr[i][j] + " ");
+                System.out.print(arr[i][j] + " ");
             System.out.println();
         }
         System.out.println("Выводим равнобедренный треугольник");
