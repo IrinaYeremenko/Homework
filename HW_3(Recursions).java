@@ -7,6 +7,7 @@ public class Main {
         System.out.println(powerN(3, 3));
         System.out.println(bunnyEars2(3));
         System.out.println(sumDigits(126));
+        System.out.println(makeChocolate(4, 1, 9));
     }
 
     public static int factorial(int n) {
@@ -25,5 +26,13 @@ public class Main {
     
      public static int sumDigits(int n) {
         return  n < 10 ? n : n % 10 + sumDigits(n / 10);
+    }
+    
+    public static int makeChocolate(int small, int big, int goal) {
+        big *= 5;
+        if (big + small < goal || small < goal % 5)
+            return -1;
+        small = goal - big;
+        return small < 0 ? (big + small) % 5 : small;
     }
 }
