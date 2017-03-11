@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(factorial(6));
         System.out.println(powerN(3, 3));
+        System.out.println(bunnyEars2(3));
+        System.out.println(sumDigits(126));
     }
 
     public static int factorial(int n) {
@@ -19,5 +21,9 @@ public class Main {
     public static int bunnyEars2(int bunnies) {
         if (bunnies == 0) return bunnies;
         return bunnies % 2 == 1 ? 2 + bunnyEars2(bunnies - 1) : 3 + bunnyEars2(bunnies - 1);
+    }
+    
+     public static int sumDigits(int n) {
+        return  n < 10 ? n : n % 10 + sumDigits(n / 10);
     }
 }
