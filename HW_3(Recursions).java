@@ -15,4 +15,9 @@ public class Main {
         if (n == 1) return base;
         return base * powerN(base, n - 1);
     }
+    
+    public static int bunnyEars2(int bunnies) {
+        if (bunnies == 0) return bunnies;
+        return bunnies % 2 == 1 ? 2 + bunnyEars2(bunnies - 1) : 3 + bunnyEars2(bunnies - 1);
+    }
 }
