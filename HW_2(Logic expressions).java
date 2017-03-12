@@ -6,6 +6,7 @@ public class Main {
         System.out.println(cigarParty(50, false));
         System.out.println(dateFashion(5, 10));
         System.out.println(squirrelPlay(30, false));
+        System.out.println(caughtSpeeding(65, true));
     }
 
     public static boolean cigarParty(int cigars, boolean isWeekend) {
@@ -30,5 +31,18 @@ public class Main {
             return temp >= 20 && temp <= 30 ? true : false;
         }
         return isSummer == true && temp >= 20 && temp <= 50 ? true : false;
+    }
+    
+    public static int caughtSpeeding(int speed, boolean isBirthday) {
+        if (isBirthday == false) {
+            if (speed <= 60) {
+                return 0;
+            } else if (speed >= 61 && speed <= 81) {
+                return 1;
+            } else {
+            }
+            return 2;
+        }
+        return isBirthday == true && speed <= 65 ? 0 : speed >= 66 && speed <= 86 ? 1 : 2;
     }
 }
