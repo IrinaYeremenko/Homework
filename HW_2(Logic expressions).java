@@ -7,6 +7,9 @@ public class Main {
         System.out.println(dateFashion(5, 10));
         System.out.println(squirrelPlay(30, false));
         System.out.println(caughtSpeeding(65, true));
+        System.out.println(sortaSum(9, 4));
+        System.out.println(love6(5, 1));
+        System.out.println(in1To10(11, true));
     }
 
     public static boolean cigarParty(int cigars, boolean isWeekend) {
@@ -44,5 +47,20 @@ public class Main {
             return 2;
         }
         return isBirthday == true && speed <= 65 ? 0 : speed >= 66 && speed <= 86 ? 1 : 2;
+    }
+    
+    public static int sortaSum(int a, int b) {
+        return (a + b) >= 10 && (a + b) <= 19 ? 20 : (a + b);
+    }
+
+    public static boolean love6(int a, int b) {
+        return (a + b == 6) || (a == 6 || b == 6) || (a - b == 6 || b - a == 6) ? true : false;
+    }
+
+    public static boolean in1To10(int n, boolean outsideMode) {
+        if (outsideMode == false) {
+            return n >= 1 && n <= 10 ? true : false;
+        }
+        return outsideMode == true && n <= 1 || n >= 10 ? true : false;
     }
 }
