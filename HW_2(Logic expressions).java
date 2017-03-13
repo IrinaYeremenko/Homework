@@ -10,6 +10,8 @@ public class Main {
         System.out.println(sortaSum(9, 4));
         System.out.println(love6(5, 1));
         System.out.println(in1To10(11, true));
+        System.out.println(answerCell(false, false, true));
+        System.out.println(noTeenSum(6, 17, 15));
     }
 
     public static boolean cigarParty(int cigars, boolean isWeekend) {
@@ -62,5 +64,22 @@ public class Main {
             return n >= 1 && n <= 10 ? true : false;
         }
         return outsideMode == true && n <= 1 || n >= 10 ? true : false;
+    }
+    
+    public static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        return isAsleep == true || (isMorning == true && isMom == false) ? false : true;
+    }
+
+    public static int noTeenSum(int a, int b, int c) {
+        if ((a >= 13 && a <= 14) || (a >= 17 && a <= 19)) {
+            a = 0;
+        }
+        if ((b >= 13 && b <= 14) || (b >= 17 && b <= 19)) {
+            b = 0;
+        }
+        if ((c >= 13 && c <= 14) || (c >= 17 && c <= 19)) {
+            c = 0;
+        }
+        return a + b + c;
     }
 }
