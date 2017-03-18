@@ -12,6 +12,10 @@ public class Main {
         System.out.println(in1To10(11, true));
         System.out.println(answerCell(false, false, true));
         System.out.println(noTeenSum(6, 17, 15));
+        System.out.println(blackjack(19, 21));
+        System.out.println(loneSum(3, 2, 3));
+        System.out.println(luckySum(1, 2, 13));
+        System.out.println(evenlySpaced(2, 4, 6));
     }
 
     public static boolean cigarParty(int cigars, boolean isWeekend) {
@@ -81,5 +85,30 @@ public class Main {
             c = 0;
         }
         return a + b + c;
+    }
+    
+    public static int blackjack(int a, int b) {
+        if (a > 21 && b > 21) return 0;
+        else if (a > 21 && b <= 21) return b;
+        else if (a <= 21 && b > 21) return a;
+        else if (a <= 21 && b <= 21 && a > b) return a;
+        else return b;
+    }
+
+    public static int loneSum(int a, int b, int c) {
+        if (a != b && b != c && a != c) return a + b + c;
+        return a == b && b != c ? c : a == c && c != b ? b : b == c && c != a ? a : 0;
+    }
+
+    public static int luckySum(int a, int b, int c) {
+        if (a == 13) return 0;
+        else if (b == 13) return a;
+        else if (c == 13) return a + b;
+        else return a + b + c;
+    }
+
+    public static boolean evenlySpaced(int a, int b, int c) {
+        if (a + b == c || b + c == a || a + c == b) return true;
+        else return false;
     }
 }
