@@ -7,8 +7,10 @@ public class Main {
         instansOfClass.setField(new Interface() {
             @Override
             public void fooBar() {
-
+                 System.out.println("Hello World!");
             }
         });
+        System.out.println("How are you?");
+        instansOfClass.callInterfaceMethod();
     }
 }
