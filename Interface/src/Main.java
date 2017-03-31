@@ -12,5 +12,8 @@ public class Main {
         });
         System.out.println("How are you?");
         instansOfClass.callInterfaceMethod();
+        SecondClass realization = new SecondClass();
+        instansOfClass.setField(realization);
+        instansOfClass.callInterfaceMethod();
     }
 }
